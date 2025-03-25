@@ -28,14 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCpf = new System.Windows.Forms.TextBox();
-            this.lblCpf = new System.Windows.Forms.Label();
-            this.txtInscEstadual = new System.Windows.Forms.TextBox();
-            this.lblInscEstadual = new System.Windows.Forms.Label();
-            this.cbkPessoaFisica = new System.Windows.Forms.CheckBox();
-            this.cbkPessoaJuridica = new System.Windows.Forms.CheckBox();
-            this.txtCnpj = new System.Windows.Forms.TextBox();
-            this.lblCNPJ = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblEstado = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
@@ -56,85 +48,19 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.pnlMenuCadModelo = new System.Windows.Forms.Panel();
             this.btnNovo = new System.Windows.Forms.Button();
+            this.txtRg = new System.Windows.Forms.TextBox();
+            this.lblRg = new System.Windows.Forms.Label();
+            this.txtCpf = new System.Windows.Forms.TextBox();
+            this.lblCpf = new System.Windows.Forms.Label();
+            this.txtInscEstadual = new System.Windows.Forms.TextBox();
+            this.lblInscEstadual = new System.Windows.Forms.Label();
+            this.cbkPessoaFisica = new System.Windows.Forms.CheckBox();
+            this.cbkPessoaJuridica = new System.Windows.Forms.CheckBox();
+            this.txtCnpj = new System.Windows.Forms.TextBox();
+            this.lblCNPJ = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaModelo)).BeginInit();
             this.pnlMenuCadModelo.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.Location = new System.Drawing.Point(761, 93);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(200, 26);
-            this.txtCpf.TabIndex = 53;
-            // 
-            // lblCpf
-            // 
-            this.lblCpf.AutoSize = true;
-            this.lblCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCpf.Location = new System.Drawing.Point(757, 70);
-            this.lblCpf.Name = "lblCpf";
-            this.lblCpf.Size = new System.Drawing.Size(40, 20);
-            this.lblCpf.TabIndex = 52;
-            this.lblCpf.Text = "CPF";
-            // 
-            // txtInscEstadual
-            // 
-            this.txtInscEstadual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInscEstadual.Location = new System.Drawing.Point(530, 93);
-            this.txtInscEstadual.Name = "txtInscEstadual";
-            this.txtInscEstadual.Size = new System.Drawing.Size(200, 26);
-            this.txtInscEstadual.TabIndex = 51;
-            // 
-            // lblInscEstadual
-            // 
-            this.lblInscEstadual.AutoSize = true;
-            this.lblInscEstadual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInscEstadual.Location = new System.Drawing.Point(526, 70);
-            this.lblInscEstadual.Name = "lblInscEstadual";
-            this.lblInscEstadual.Size = new System.Drawing.Size(110, 20);
-            this.lblInscEstadual.TabIndex = 50;
-            this.lblInscEstadual.Text = "Insc. Estadual";
-            // 
-            // cbkPessoaFisica
-            // 
-            this.cbkPessoaFisica.AutoSize = true;
-            this.cbkPessoaFisica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbkPessoaFisica.Location = new System.Drawing.Point(14, 93);
-            this.cbkPessoaFisica.Name = "cbkPessoaFisica";
-            this.cbkPessoaFisica.Size = new System.Drawing.Size(126, 24);
-            this.cbkPessoaFisica.TabIndex = 49;
-            this.cbkPessoaFisica.Text = "Pessoa Física";
-            this.cbkPessoaFisica.UseVisualStyleBackColor = true;
-            // 
-            // cbkPessoaJuridica
-            // 
-            this.cbkPessoaJuridica.AutoSize = true;
-            this.cbkPessoaJuridica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbkPessoaJuridica.Location = new System.Drawing.Point(146, 93);
-            this.cbkPessoaJuridica.Name = "cbkPessoaJuridica";
-            this.cbkPessoaJuridica.Size = new System.Drawing.Size(139, 24);
-            this.cbkPessoaJuridica.TabIndex = 48;
-            this.cbkPessoaJuridica.Text = "Pessoa Jurídica";
-            this.cbkPessoaJuridica.UseVisualStyleBackColor = true;
-            // 
-            // txtCnpj
-            // 
-            this.txtCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCnpj.Location = new System.Drawing.Point(307, 93);
-            this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(200, 26);
-            this.txtCnpj.TabIndex = 47;
-            // 
-            // lblCNPJ
-            // 
-            this.lblCNPJ.AutoSize = true;
-            this.lblCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCNPJ.Location = new System.Drawing.Point(303, 70);
-            this.lblCNPJ.Name = "lblCNPJ";
-            this.lblCNPJ.Size = new System.Drawing.Size(49, 20);
-            this.lblCNPJ.TabIndex = 46;
-            this.lblCNPJ.Text = "CNPJ";
             // 
             // textBox1
             // 
@@ -334,11 +260,109 @@
             this.btnNovo.Text = "Adicionar";
             this.btnNovo.UseVisualStyleBackColor = true;
             // 
+            // txtRg
+            // 
+            this.txtRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRg.Location = new System.Drawing.Point(567, 101);
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(177, 26);
+            this.txtRg.TabIndex = 55;
+            // 
+            // lblRg
+            // 
+            this.lblRg.AutoSize = true;
+            this.lblRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRg.Location = new System.Drawing.Point(563, 78);
+            this.lblRg.Name = "lblRg";
+            this.lblRg.Size = new System.Drawing.Size(34, 20);
+            this.lblRg.TabIndex = 54;
+            this.lblRg.Text = "RG";
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpf.Location = new System.Drawing.Point(761, 101);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(200, 26);
+            this.txtCpf.TabIndex = 53;
+            // 
+            // lblCpf
+            // 
+            this.lblCpf.AutoSize = true;
+            this.lblCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCpf.Location = new System.Drawing.Point(757, 78);
+            this.lblCpf.Name = "lblCpf";
+            this.lblCpf.Size = new System.Drawing.Size(40, 20);
+            this.lblCpf.TabIndex = 52;
+            this.lblCpf.Text = "CPF";
+            // 
+            // txtInscEstadual
+            // 
+            this.txtInscEstadual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInscEstadual.Location = new System.Drawing.Point(387, 101);
+            this.txtInscEstadual.Name = "txtInscEstadual";
+            this.txtInscEstadual.Size = new System.Drawing.Size(166, 26);
+            this.txtInscEstadual.TabIndex = 51;
+            // 
+            // lblInscEstadual
+            // 
+            this.lblInscEstadual.AutoSize = true;
+            this.lblInscEstadual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInscEstadual.Location = new System.Drawing.Point(383, 78);
+            this.lblInscEstadual.Name = "lblInscEstadual";
+            this.lblInscEstadual.Size = new System.Drawing.Size(110, 20);
+            this.lblInscEstadual.TabIndex = 50;
+            this.lblInscEstadual.Text = "Insc. Estadual";
+            // 
+            // cbkPessoaFisica
+            // 
+            this.cbkPessoaFisica.AutoSize = true;
+            this.cbkPessoaFisica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbkPessoaFisica.Location = new System.Drawing.Point(12, 78);
+            this.cbkPessoaFisica.Name = "cbkPessoaFisica";
+            this.cbkPessoaFisica.Size = new System.Drawing.Size(126, 24);
+            this.cbkPessoaFisica.TabIndex = 49;
+            this.cbkPessoaFisica.Text = "Pessoa Física";
+            this.cbkPessoaFisica.UseVisualStyleBackColor = true;
+            this.cbkPessoaFisica.CheckedChanged += new System.EventHandler(this.cbkPessoaFisica_CheckedChanged);
+            // 
+            // cbkPessoaJuridica
+            // 
+            this.cbkPessoaJuridica.AutoSize = true;
+            this.cbkPessoaJuridica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbkPessoaJuridica.Location = new System.Drawing.Point(12, 103);
+            this.cbkPessoaJuridica.Name = "cbkPessoaJuridica";
+            this.cbkPessoaJuridica.Size = new System.Drawing.Size(139, 24);
+            this.cbkPessoaJuridica.TabIndex = 48;
+            this.cbkPessoaJuridica.Text = "Pessoa Jurídica";
+            this.cbkPessoaJuridica.UseVisualStyleBackColor = true;
+            this.cbkPessoaJuridica.CheckedChanged += new System.EventHandler(this.cbkPessoaJuridica_CheckedChanged);
+            // 
+            // txtCnpj
+            // 
+            this.txtCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCnpj.Location = new System.Drawing.Point(174, 101);
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(200, 26);
+            this.txtCnpj.TabIndex = 47;
+            // 
+            // lblCNPJ
+            // 
+            this.lblCNPJ.AutoSize = true;
+            this.lblCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCNPJ.Location = new System.Drawing.Point(170, 78);
+            this.lblCNPJ.Name = "lblCNPJ";
+            this.lblCNPJ.Size = new System.Drawing.Size(49, 20);
+            this.lblCNPJ.TabIndex = 46;
+            this.lblCNPJ.Text = "CNPJ";
+            // 
             // FrmCadFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.txtRg);
+            this.Controls.Add(this.lblRg);
             this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.lblCpf);
             this.Controls.Add(this.txtInscEstadual);
@@ -376,15 +400,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtCpf;
-        private System.Windows.Forms.Label lblCpf;
-        private System.Windows.Forms.TextBox txtInscEstadual;
-        private System.Windows.Forms.Label lblInscEstadual;
-        private System.Windows.Forms.CheckBox cbkPessoaFisica;
-        private System.Windows.Forms.CheckBox cbkPessoaJuridica;
-        private System.Windows.Forms.TextBox txtCnpj;
-        private System.Windows.Forms.Label lblCNPJ;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.TextBox txtCidade;
@@ -405,5 +420,15 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Panel pnlMenuCadModelo;
         private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.TextBox txtRg;
+        private System.Windows.Forms.Label lblRg;
+        private System.Windows.Forms.TextBox txtCpf;
+        private System.Windows.Forms.Label lblCpf;
+        private System.Windows.Forms.TextBox txtInscEstadual;
+        private System.Windows.Forms.Label lblInscEstadual;
+        private System.Windows.Forms.CheckBox cbkPessoaFisica;
+        private System.Windows.Forms.CheckBox cbkPessoaJuridica;
+        private System.Windows.Forms.TextBox txtCnpj;
+        private System.Windows.Forms.Label lblCNPJ;
     }
 }
