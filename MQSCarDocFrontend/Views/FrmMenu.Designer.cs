@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,10 +65,10 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stBarPrincipal = new System.Windows.Forms.StatusStrip();
             this.stBarNomeEmpresa = new System.Windows.Forms.ToolStripStatusLabel();
-            this.stEspacoNome = new System.Windows.Forms.ToolStripStatusLabel();
-            this.stBarUsuário = new System.Windows.Forms.ToolStripStatusLabel();
-            this.stBarSemTexto = new System.Windows.Forms.ToolStripStatusLabel();
+            this.stBarUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.stDtaHora = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.stBarDia = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip.SuspendLayout();
             this.stBarPrincipal.SuspendLayout();
             this.SuspendLayout();
@@ -335,10 +336,9 @@
             // 
             this.stBarPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stBarNomeEmpresa,
-            this.stEspacoNome,
-            this.stBarUsuário,
-            this.stBarSemTexto,
-            this.stDtaHora});
+            this.stBarUsuario,
+            this.stDtaHora,
+            this.stBarDia});
             this.stBarPrincipal.Location = new System.Drawing.Point(0, 659);
             this.stBarPrincipal.Name = "stBarPrincipal";
             this.stBarPrincipal.Size = new System.Drawing.Size(1084, 22);
@@ -347,36 +347,34 @@
             // 
             // stBarNomeEmpresa
             // 
+            this.stBarNomeEmpresa.AutoSize = false;
+            this.stBarNomeEmpresa.Margin = new System.Windows.Forms.Padding(0);
             this.stBarNomeEmpresa.Name = "stBarNomeEmpresa";
-            this.stBarNomeEmpresa.Size = new System.Drawing.Size(370, 17);
-            this.stBarNomeEmpresa.Text = "MQS CarDoc - Sistema de Gestão para Despachantes Veícular              ";
+            this.stBarNomeEmpresa.Size = new System.Drawing.Size(470, 22);
             this.stBarNomeEmpresa.Click += new System.EventHandler(this.stBarNomeEmpresa_Click);
             // 
-            // stEspacoNome
+            // stBarUsuario
             // 
-            this.stEspacoNome.Name = "stEspacoNome";
-            this.stEspacoNome.Size = new System.Drawing.Size(40, 17);
-            this.stEspacoNome.Text = "           ";
-            this.stEspacoNome.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
-            // 
-            // stBarUsuário
-            // 
-            this.stBarUsuário.Name = "stBarUsuário";
-            this.stBarUsuário.Size = new System.Drawing.Size(179, 17);
-            this.stBarUsuário.Text = "Marcelo                                           ";
-            // 
-            // stBarSemTexto
-            // 
-            this.stBarSemTexto.Name = "stBarSemTexto";
-            this.stBarSemTexto.Size = new System.Drawing.Size(58, 17);
-            this.stBarSemTexto.Text = "                 ";
-            this.stBarSemTexto.Click += new System.EventHandler(this.toolStripStatusLabel1_Click_1);
+            this.stBarUsuario.AutoSize = false;
+            this.stBarUsuario.Margin = new System.Windows.Forms.Padding(0);
+            this.stBarUsuario.Name = "stBarUsuario";
+            this.stBarUsuario.Size = new System.Drawing.Size(250, 22);
             // 
             // stDtaHora
             // 
+            this.stDtaHora.Margin = new System.Windows.Forms.Padding(0);
             this.stDtaHora.Name = "stDtaHora";
-            this.stDtaHora.Size = new System.Drawing.Size(231, 17);
-            this.stDtaHora.Text = "                          24 de Março de 2025 - 22:36";
+            this.stDtaHora.Size = new System.Drawing.Size(0, 22);
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 1000;
+            // 
+            // stBarDia
+            // 
+            this.stBarDia.Name = "stBarDia";
+            this.stBarDia.Size = new System.Drawing.Size(0, 17);
             // 
             // FrmMenu
             // 
@@ -437,11 +435,11 @@
         private System.Windows.Forms.ToolStripMenuItem baixaCtasÀPagarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaCtasÀPagarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem envioParaBancoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripStatusLabel stBarUsuário;
-        private System.Windows.Forms.ToolStripStatusLabel stEspacoNome;
-        private System.Windows.Forms.ToolStripStatusLabel stBarSemTexto;
+        private System.Windows.Forms.ToolStripStatusLabel stBarUsuario;
         private System.Windows.Forms.ToolStripStatusLabel stDtaHora;
         private System.Windows.Forms.ToolStripMenuItem tipoDeProcessoToolStripMenuItem;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.ToolStripStatusLabel stBarDia;
     }
 }
 

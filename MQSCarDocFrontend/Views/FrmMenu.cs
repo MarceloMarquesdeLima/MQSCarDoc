@@ -1,5 +1,6 @@
 ﻿using MQSCarDocFrontend.Views;
 using System;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace MQSCarDocFrontend
@@ -11,7 +12,24 @@ namespace MQSCarDocFrontend
         public FrmMenu()
         {
             InitializeComponent();
+
+            timer = new Timer();
+            timer.Interval = 1000; 
+            timer.Tick += Timer_Tick;
+            timer.Start();
+
         }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            //  stBarUsuario
+            stBarNomeEmpresa.Text = "MQS CarDoc - Sistema de Gestão para Despachantes Veícular";
+            stBarUsuario.Text = "Veja Bem-Vindos: " + "Marcelo Marques";
+            stDtaHora.Text = DateTime.Now.ToString("HH:mm:ss");
+            stBarDia.Text = DateTime.Now.ToString("dddd, dd 'de' MMMM 'de' yyyy", new CultureInfo("pt-BR"));
+
+        }
+
 
         private void ShowNewForm(object sender, EventArgs e)
         {
