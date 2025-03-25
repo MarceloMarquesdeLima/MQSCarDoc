@@ -46,6 +46,8 @@
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Marca.cs" />
     <Compile Include="Models\Modelo.cs" />
+    <Compile Include="Models\Permissao.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
