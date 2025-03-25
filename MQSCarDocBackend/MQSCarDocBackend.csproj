@@ -54,9 +54,9 @@
     <Folder Include="Context\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MQSCarDocFrontend\MQSCarDocFrontend.csproj">
+    <ProjectReference Include="..\MQSCarDocFrontend\MQSCarDoc.csproj">
       <Project>{e8c14545-06ef-49cd-93e3-ad8158bc6615}</Project>
-      <Name>MQSCarDocFrontend</Name>
+      <Name>MQSCarDoc</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

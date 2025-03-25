@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\CadTipProcesso.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Fornecedor.cs" />
+    <Compile Include="Models\Marca.cs" />
+    <Compile Include="Models\Modelo.cs" />
+    <Compile Include="Models\Permissao.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Views\FrmCadCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +143,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\simbolo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
