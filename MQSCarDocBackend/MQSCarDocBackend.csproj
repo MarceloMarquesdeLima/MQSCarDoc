@@ -47,7 +47,6 @@
     <Compile Include="Models\Marca.cs" />
     <Compile Include="Models\Modelo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validate\ValidaPessoa.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Context\" />

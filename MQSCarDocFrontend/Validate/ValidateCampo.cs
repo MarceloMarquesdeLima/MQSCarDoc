@@ -1,8 +1,8 @@
-﻿namespace MQSGestaoBackend.Validate
+﻿namespace MQSCarDocFrontend.Validate
 {
-    public class ValidaPessoa
+    public class ValidateCampo
     {
-        private void ValidateCbk()
+        private void ValidateCbkFor()
         {
             if (cbkPessoaFisica.Checked)
             {
