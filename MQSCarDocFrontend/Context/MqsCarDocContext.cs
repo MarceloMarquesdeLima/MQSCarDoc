@@ -1,8 +1,9 @@
 ﻿using MQSMQSCarDoc.Models;
+using System.Data.Entity;
 
 namespace MQSCarDocFrontend.Context
 {
-    /*public class MqsCarDocContext : DbContext
+    public class MqsCarDocContext : DbContext
     {
         public MqsCarDocContext() : base("name=ConnectionString") { }
 
@@ -13,5 +14,6 @@ namespace MQSCarDocFrontend.Context
         public DbSet<Marca> Marca { get; set; }
         public DbSet<Modelo> Modelo { get; set; }
         public DbSet<Permissao> Permissao { get; set; }
-    }*/
+
+    }
 }
