@@ -196,7 +196,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Banco\Conection.cs" />
+    <Compile Include="Banco\Connection.cs" />
+    <Compile Include="Models\Fornecedor\ExecutarEditarFornecedor.cs" />
+    <Compile Include="Models\Fornecedor\ExecutarDeleteFornecedor.cs" />
+    <Compile Include="Models\Fornecedor\ExecutarInclusaoFornecedor.cs" />
+    <Compile Include="Models\Fornecedor\ExecutarConsultaFornecedor.cs" />
     <Compile Include="Views\FrmCadCliente.cs">
       <SubType>Form</SubType>
     </Compile>
