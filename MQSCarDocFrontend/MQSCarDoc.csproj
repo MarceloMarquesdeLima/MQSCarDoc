@@ -196,7 +196,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\MqsCarDocContext.cs" />
+    <Compile Include="Banco\Conection.cs" />
     <Compile Include="Views\FrmCadCliente.cs">
       <SubType>Form</SubType>
     </Compile>
