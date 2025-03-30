@@ -70,5 +70,18 @@ namespace MQSCarDocFrontend.Views
                 txtRg.Enabled = false;
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Cancelar();
+        }
+
+        private void Cancelar()
+        {
+            txtNome.Text = "";
+            txtBairro.Text = "";
+            txtTelefone.Text = string.Empty;
+            txtCelular.Text = string.Empty;
+        }
     }
 }

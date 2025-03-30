@@ -201,6 +201,7 @@
   <ItemGroup>
     <Compile Include="Banco\Connection.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\FornecedorController.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Fornecedor.cs" />
