@@ -9,6 +9,20 @@ namespace MQSCarDocFrontend.Models
     [Table("Cliente")]
     public partial class Cliente
     {
+        public Cliente() { }
+        public Cliente(int iD, int? endereco_ID, string nome, bool? ativo, string celular, string telefone, 
+                       string email, Endereco endereco)
+        {
+            ID = iD;
+            Endereco_ID = endereco_ID;
+            Nome = nome;
+            Ativo = ativo;
+            Celular = celular;
+            Telefone = telefone;
+            Email = email;
+            Endereco = endereco;
+        }
+
         public int ID { get; set; }
 
         public int? Endereco_ID { get; set; }
