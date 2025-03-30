@@ -12,11 +12,29 @@ namespace MQSCarDocFrontend.Views
 {
     public partial class FrmCadCliente : Form
     {
+        private ClienteController clienteController;
         public FrmCadCliente()
         {
             InitializeComponent();
+            clienteController = new ClienteController();
         }
 
+        /*private void buttonAdicionar_Click(object sender, EventArgs e)
+         {
+            var cliente = new Cliente(1, "Marcelo", "marcelo@email.com");
+            clienteController.AdicionarCliente(cliente);
+            MessageBox.Show($"Cliente {cliente.Nome} adicionado com sucesso!");
+        }
+
+        private void buttonMostrarClientes_Click(object sender, EventArgs e)
+        {
+            var clientes = clienteController.ObterClientes();
+            foreach (var cliente in clientes)
+            {
+                MessageBox.Show($"ID: {cliente.Id}, Nome: {cliente.Nome}, Email: {cliente.Email}");
+            }
+        }*/
+       
         private void FrmCadCliente_Load(object sender, EventArgs e)
         {
             
