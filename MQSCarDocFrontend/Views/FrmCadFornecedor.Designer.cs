@@ -34,11 +34,9 @@
             this.lblCidade = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.lblBairro = new System.Windows.Forms.Label();
-            this.txtCelular = new System.Windows.Forms.TextBox();
             this.lblCelular = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.lblEndereco = new System.Windows.Forms.Label();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -50,14 +48,16 @@
             this.btnNovo = new System.Windows.Forms.Button();
             this.txtRg = new System.Windows.Forms.TextBox();
             this.lblRg = new System.Windows.Forms.Label();
-            this.txtCpf = new System.Windows.Forms.TextBox();
             this.lblCpf = new System.Windows.Forms.Label();
-            this.txtInscEstadual = new System.Windows.Forms.TextBox();
             this.lblInscEstadual = new System.Windows.Forms.Label();
             this.cbkPessoaFisica = new System.Windows.Forms.CheckBox();
             this.cbkPessoaJuridica = new System.Windows.Forms.CheckBox();
-            this.txtCnpj = new System.Windows.Forms.TextBox();
             this.lblCNPJ = new System.Windows.Forms.Label();
+            this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.txtInscEstadual = new System.Windows.Forms.TextBox();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaModelo)).BeginInit();
             this.pnlMenuCadModelo.SuspendLayout();
             this.SuspendLayout();
@@ -116,14 +116,6 @@
             this.lblBairro.TabIndex = 40;
             this.lblBairro.Text = "Bairro";
             // 
-            // txtCelular
-            // 
-            this.txtCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCelular.Location = new System.Drawing.Point(761, 170);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(200, 26);
-            this.txtCelular.TabIndex = 39;
-            // 
             // lblCelular
             // 
             this.lblCelular.AutoSize = true;
@@ -151,14 +143,6 @@
             this.lblEndereco.Size = new System.Drawing.Size(78, 20);
             this.lblEndereco.TabIndex = 36;
             this.lblEndereco.Text = "Endereço";
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(530, 170);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(200, 26);
-            this.txtTelefone.TabIndex = 35;
             // 
             // lblTelefone
             // 
@@ -278,14 +262,6 @@
             this.lblRg.TabIndex = 54;
             this.lblRg.Text = "RG";
             // 
-            // txtCpf
-            // 
-            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.Location = new System.Drawing.Point(761, 101);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(200, 26);
-            this.txtCpf.TabIndex = 53;
-            // 
             // lblCpf
             // 
             this.lblCpf.AutoSize = true;
@@ -295,14 +271,6 @@
             this.lblCpf.Size = new System.Drawing.Size(40, 20);
             this.lblCpf.TabIndex = 52;
             this.lblCpf.Text = "CPF";
-            // 
-            // txtInscEstadual
-            // 
-            this.txtInscEstadual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInscEstadual.Location = new System.Drawing.Point(387, 101);
-            this.txtInscEstadual.Name = "txtInscEstadual";
-            this.txtInscEstadual.Size = new System.Drawing.Size(166, 26);
-            this.txtInscEstadual.TabIndex = 51;
             // 
             // lblInscEstadual
             // 
@@ -338,14 +306,6 @@
             this.cbkPessoaJuridica.UseVisualStyleBackColor = true;
             this.cbkPessoaJuridica.CheckedChanged += new System.EventHandler(this.cbkPessoaJuridica_CheckedChanged);
             // 
-            // txtCnpj
-            // 
-            this.txtCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCnpj.Location = new System.Drawing.Point(174, 101);
-            this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(200, 26);
-            this.txtCnpj.TabIndex = 47;
-            // 
             // lblCNPJ
             // 
             this.lblCNPJ.AutoSize = true;
@@ -356,20 +316,66 @@
             this.lblCNPJ.TabIndex = 46;
             this.lblCNPJ.Text = "CNPJ";
             // 
+            // txtCnpj
+            // 
+            this.txtCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCnpj.Location = new System.Drawing.Point(174, 103);
+            this.txtCnpj.Mask = "00.000.000/0000-00";
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(191, 26);
+            this.txtCnpj.TabIndex = 57;
+            // 
+            // txtInscEstadual
+            // 
+            this.txtInscEstadual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInscEstadual.Location = new System.Drawing.Point(387, 102);
+            this.txtInscEstadual.Name = "txtInscEstadual";
+            this.txtInscEstadual.Size = new System.Drawing.Size(166, 26);
+            this.txtInscEstadual.TabIndex = 56;
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpf.Location = new System.Drawing.Point(761, 103);
+            this.txtCpf.Mask = "000.000.000-00";
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(200, 26);
+            this.txtCpf.TabIndex = 58;
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelular.Location = new System.Drawing.Point(761, 170);
+            this.txtCelular.Mask = "(99) 0000-0000";
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(200, 26);
+            this.txtCelular.TabIndex = 60;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Location = new System.Drawing.Point(530, 170);
+            this.txtTelefone.Mask = "(99) 0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(214, 26);
+            this.txtTelefone.TabIndex = 59;
+            // 
             // FrmCadFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.txtCelular);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.txtCpf);
+            this.Controls.Add(this.txtCnpj);
+            this.Controls.Add(this.txtInscEstadual);
             this.Controls.Add(this.txtRg);
             this.Controls.Add(this.lblRg);
-            this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.lblCpf);
-            this.Controls.Add(this.txtInscEstadual);
             this.Controls.Add(this.lblInscEstadual);
             this.Controls.Add(this.cbkPessoaFisica);
             this.Controls.Add(this.cbkPessoaJuridica);
-            this.Controls.Add(this.txtCnpj);
             this.Controls.Add(this.lblCNPJ);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblEstado);
@@ -377,11 +383,9 @@
             this.Controls.Add(this.lblCidade);
             this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.lblBairro);
-            this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.lblCelular);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.lblEndereco);
-            this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.lblTelefone);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
@@ -406,11 +410,9 @@
         private System.Windows.Forms.Label lblCidade;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label lblBairro;
-        private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.Label lblCelular;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label lblEndereco;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
@@ -422,13 +424,15 @@
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.TextBox txtRg;
         private System.Windows.Forms.Label lblRg;
-        private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.Label lblCpf;
-        private System.Windows.Forms.TextBox txtInscEstadual;
         private System.Windows.Forms.Label lblInscEstadual;
         private System.Windows.Forms.CheckBox cbkPessoaFisica;
         private System.Windows.Forms.CheckBox cbkPessoaJuridica;
-        private System.Windows.Forms.TextBox txtCnpj;
         private System.Windows.Forms.Label lblCNPJ;
+        private System.Windows.Forms.MaskedTextBox txtCnpj;
+        private System.Windows.Forms.TextBox txtInscEstadual;
+        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.MaskedTextBox txtCelular;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
     }
 }
