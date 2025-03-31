@@ -30,9 +30,10 @@ CREATE TABLE Cliente (
 );
 
 -- Tabela Fornecedor com chave estrangeira referenciando Endereco(IdEndereco)
-CREATE TABLE Fornecedor (
-    ID INT IDENTITY(1,1) PRIMARY KEY  NOT NULL,
-    Endereco_ID INT,
-    Nome VARCHAR(100),
-    FOREIGN KEY (Endereco_ID) REFERENCES Endereco(IdEndereco) ON DELETE CASCADE
+CREATE TABLE Usuario (
+    ID INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    Empresa_ID INT,
+    UserName VARCHAR(100),
+	SenhaUser VARCHAR(10), 
+    FOREIGN KEY (Empresa_ID) REFERENCES Empresa(ID) ON DELETE CASCADE
 );
