@@ -37,3 +37,16 @@ CREATE TABLE Usuario (
 	SenhaUser VARCHAR(10), 
     FOREIGN KEY (Empresa_ID) REFERENCES Empresa(ID) ON DELETE CASCADE
 );
+
+CREATE TABLE Permissao (
+    ID INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    Empresa_ID INT,
+    NomePermissao VARCHAR(100),
+);
+
+CREATE TABLE PermissaoUsuario (
+    Usuario_ID INT,
+    Permissao_ID INT,
+	FOREIGN KEY (Usuario_ID) REFERENCES Usuario(ID) ON DELETE CASCADE,
+	FOREIGN KEY (Permissao_ID) REFERENCES Permissao(ID) ON DELETE CASCADE
+);

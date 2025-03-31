@@ -206,6 +206,8 @@
     <Compile Include="Models\Fornecedor.cs" />
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\Models.cs" />
+    <Compile Include="Models\Permissao.cs" />
+    <Compile Include="Models\PermissaoUsuario.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\View_Cliente.cs" />

@@ -17,7 +17,10 @@ namespace MQSCarDocFrontend.Models
         public virtual DbSet<Endereco> Endereco { get; set; }
         public virtual DbSet<Fornecedor> Fornecedor { get; set; }
         public virtual DbSet<Funcionario> Funcionario { get; set; }
+        public virtual DbSet<Permissao> Permissao { get; set; }
+        public virtual DbSet<PermissaoUsuario> PermissaoUsuario { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<View_Cliente> View_Cliente { get; set; }
         public virtual DbSet<View_Fornecedor> View_Fornecedor { get; set; }
         public virtual DbSet<View_Funcionario> View_Funcionario { get; set; }
@@ -55,6 +58,12 @@ namespace MQSCarDocFrontend.Models
             modelBuilder.Entity<Empresa>()
                 .Property(e => e.Email)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Empresa>()
+                .HasMany(e => e.Usuario)
+                .WithOptional(e => e.Empresa)
+                .HasForeignKey(e => e.Empresa_ID)
+                .WillCascadeOnDelete();
 
             modelBuilder.Entity<Endereco>()
                 .Property(e => e.Rua)
@@ -131,6 +140,32 @@ namespace MQSCarDocFrontend.Models
             modelBuilder.Entity<Funcionario>()
                 .Property(e => e.Email)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Permissao>()
+                .Property(e => e.NomePermissao)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Usuario>()
+                .Property(e => e.UserName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Usuario>()
+                .Property(e => e.SenhaUser)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<PermissaoUsuario>()
+                .HasKey(pu => new { pu.UsuarioId, pu.PermissaoId });
+
+            modelBuilder.Entity<PermissaoUsuario>()
+                .HasRequired(pu => pu.Usuario)
+                .WithMany(u => u.Permissoes)
+                .HasForeignKey(pu => pu.UsuarioId);
+
+            modelBuilder.Entity<PermissaoUsuario>()
+                .HasRequired(pu => pu.Permissao)
+                .WithMany(p => p.Usuarios)
+                .HasForeignKey(pu => pu.PermissaoId);
+
 
             modelBuilder.Entity<View_Cliente>()
                 .Property(e => e.Nome)
