@@ -5,14 +5,15 @@ using System.Linq;
 
 namespace MQSCarDocFrontend.Models
 {
-    public partial class ModelEntities : DbContext
+    public partial class Models : DbContext
     {
-        public ModelEntities()
-            : base("name=ModelEntities")
+        public Models()
+            : base("name=Models")
         {
         }
 
         public virtual DbSet<Cliente> Cliente { get; set; }
+        public virtual DbSet<Empresa> Empresa { get; set; }
         public virtual DbSet<Endereco> Endereco { get; set; }
         public virtual DbSet<Fornecedor> Fornecedor { get; set; }
         public virtual DbSet<Funcionario> Funcionario { get; set; }
@@ -39,6 +40,22 @@ namespace MQSCarDocFrontend.Models
                 .Property(e => e.Email)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<Empresa>()
+                .Property(e => e.Nome)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Empresa>()
+                .Property(e => e.Celular)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Empresa>()
+                .Property(e => e.Telefone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Empresa>()
+                .Property(e => e.Email)
+                .IsUnicode(false);
+
             modelBuilder.Entity<Endereco>()
                 .Property(e => e.Rua)
                 .IsUnicode(false);
@@ -61,6 +78,12 @@ namespace MQSCarDocFrontend.Models
 
             modelBuilder.Entity<Endereco>()
                 .HasMany(e => e.Cliente)
+                .WithOptional(e => e.Endereco)
+                .HasForeignKey(e => e.Endereco_ID)
+                .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Endereco>()
+                .HasMany(e => e.Empresa)
                 .WithOptional(e => e.Endereco)
                 .HasForeignKey(e => e.Endereco_ID)
                 .WillCascadeOnDelete();

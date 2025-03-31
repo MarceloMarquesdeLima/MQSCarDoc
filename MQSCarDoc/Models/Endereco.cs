@@ -13,6 +13,7 @@ namespace MQSCarDocFrontend.Models
         public Endereco()
         {
             Cliente = new HashSet<Cliente>();
+            Empresa = new HashSet<Empresa>();
             Fornecedor = new HashSet<Fornecedor>();
             Funcionario = new HashSet<Funcionario>();
         }
@@ -38,6 +39,9 @@ namespace MQSCarDocFrontend.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Cliente> Cliente { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Empresa> Empresa { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Fornecedor> Fornecedor { get; set; }

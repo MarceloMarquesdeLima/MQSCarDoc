@@ -200,13 +200,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco\Connection.cs" />
-    <Compile Include="Controllers\ClienteController.cs" />
-    <Compile Include="Controllers\FornecedorController.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Empresa.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Fornecedor.cs" />
     <Compile Include="Models\Funcionario.cs" />
-    <Compile Include="Models\ModelEntities.cs" />
+    <Compile Include="Models\Models.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Models\View_Cliente.cs" />
     <Compile Include="Models\View_Fornecedor.cs" />
@@ -295,7 +294,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -318,7 +316,9 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

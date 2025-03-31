@@ -12,11 +12,11 @@ namespace MQSCarDocFrontend.Views
 {
     public partial class FrmCadCliente : Form
     {
-        private ClienteController clienteController;
+        //private ClienteController clienteController;
         public FrmCadCliente()
         {
             InitializeComponent();
-            clienteController = new ClienteController();
+            //clienteController = new ClienteController();
         }
 
         /*private void buttonAdicionar_Click(object sender, EventArgs e)

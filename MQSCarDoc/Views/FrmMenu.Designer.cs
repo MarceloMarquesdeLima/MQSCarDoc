@@ -67,8 +67,9 @@
             this.stBarNomeEmpresa = new System.Windows.Forms.ToolStripStatusLabel();
             this.stBarUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.stDtaHora = new System.Windows.Forms.ToolStripStatusLabel();
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.stBarDia = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.empresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.stBarPrincipal.SuspendLayout();
             this.SuspendLayout();
@@ -119,22 +120,23 @@
             // 
             this.pessoaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clienteToolStripMenuItem,
-            this.fonecedorToolStripMenuItem});
+            this.fonecedorToolStripMenuItem,
+            this.empresaToolStripMenuItem});
             this.pessoaToolStripMenuItem.Name = "pessoaToolStripMenuItem";
-            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pessoaToolStripMenuItem.Text = "Pessoa";
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // fonecedorToolStripMenuItem
             // 
             this.fonecedorToolStripMenuItem.Name = "fonecedorToolStripMenuItem";
-            this.fonecedorToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.fonecedorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fonecedorToolStripMenuItem.Text = "Fonecedor";
             this.fonecedorToolStripMenuItem.Click += new System.EventHandler(this.fonecedorToolStripMenuItem_Click);
             // 
@@ -144,7 +146,7 @@
             this.modeloToolStripMenuItem,
             this.marcaToolStripMenuItem});
             this.veículosToolStripMenuItem.Name = "veículosToolStripMenuItem";
-            this.veículosToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.veículosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.veículosToolStripMenuItem.Text = "Veículos";
             // 
             // modeloToolStripMenuItem
@@ -164,7 +166,7 @@
             // tipoDeProcessoToolStripMenuItem
             // 
             this.tipoDeProcessoToolStripMenuItem.Name = "tipoDeProcessoToolStripMenuItem";
-            this.tipoDeProcessoToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.tipoDeProcessoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tipoDeProcessoToolStripMenuItem.Text = "Tipo de Processo";
             this.tipoDeProcessoToolStripMenuItem.Click += new System.EventHandler(this.tipoDeProcessoToolStripMenuItem_Click);
             // 
@@ -364,17 +366,24 @@
             // 
             this.stDtaHora.Margin = new System.Windows.Forms.Padding(0);
             this.stDtaHora.Name = "stDtaHora";
-            this.stDtaHora.Size = new System.Drawing.Size(0, 22);
+            this.stDtaHora.Size = new System.Drawing.Size(0, 0);
+            // 
+            // stBarDia
+            // 
+            this.stBarDia.Name = "stBarDia";
+            this.stBarDia.Size = new System.Drawing.Size(0, 17);
             // 
             // timer
             // 
             this.timer.Enabled = true;
             this.timer.Interval = 1000;
             // 
-            // stBarDia
+            // empresaToolStripMenuItem
             // 
-            this.stBarDia.Name = "stBarDia";
-            this.stBarDia.Size = new System.Drawing.Size(0, 17);
+            this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
+            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.empresaToolStripMenuItem.Text = "Empresa";
+            this.empresaToolStripMenuItem.Click += new System.EventHandler(this.empresaToolStripMenuItem_Click);
             // 
             // FrmMenu
             // 
@@ -440,6 +449,7 @@
         private System.Windows.Forms.ToolStripMenuItem tipoDeProcessoToolStripMenuItem;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.ToolStripStatusLabel stBarDia;
+        private System.Windows.Forms.ToolStripMenuItem empresaToolStripMenuItem;
     }
 }
 

@@ -133,5 +133,12 @@ namespace MQSCarDocFrontend
         {
             
         }
+
+        private void empresaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEmpresa frmEmpresa = new FrmEmpresa();
+            frmEmpresa.MdiParent = this;
+            frmEmpresa.Show();
+        }
     }
 }

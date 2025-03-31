@@ -14,7 +14,7 @@ CREATE TABLE Endereco (
 );
 
 -- Tabela Funcionario com chave estrangeira referenciando Endereco(IdEndereco)
-CREATE TABLE Funcionario (
+CREATE TABLE Empresa (
     ID INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
     Endereco_ID INT,
     Nome VARCHAR(100),
