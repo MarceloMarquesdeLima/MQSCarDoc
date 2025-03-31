@@ -205,6 +205,8 @@
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Fornecedor.cs" />
     <Compile Include="Models\Funcionario.cs" />
+    <Compile Include="Models\Marca.cs" />
+    <Compile Include="Models\Modelo.cs" />
     <Compile Include="Models\Models.cs" />
     <Compile Include="Models\Permissao.cs" />
     <Compile Include="Models\PermissaoUsuario.cs" />
