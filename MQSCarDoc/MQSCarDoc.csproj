@@ -200,6 +200,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco\Connection.cs" />
+    <Compile Include="Model1.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Empresa.cs" />
     <Compile Include="Models\Endereco.cs" />
@@ -211,10 +212,12 @@
     <Compile Include="Models\Permissao.cs" />
     <Compile Include="Models\PermissaoUsuario.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
+    <Compile Include="Models\TipoProcesso.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\View_Cliente.cs" />
     <Compile Include="Models\View_Fornecedor.cs" />
     <Compile Include="Models\View_Funcionario.cs" />
+    <Compile Include="TipoProcesso.cs" />
     <Compile Include="Views\FrmCadCliente.cs">
       <SubType>Form</SubType>
     </Compile>

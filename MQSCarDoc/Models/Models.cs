@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace MQSCarDocFrontend.Models
 {
-    public partial class Models : DbContext
+    public partial class MQSCarDocContext : DbContext
     {
-        public Models()
+        public MQSCarDocContext()
             : base("name=Models")
         {
         }
@@ -23,12 +23,17 @@ namespace MQSCarDocFrontend.Models
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Marca> Marca { get; set; }
         public virtual DbSet<Modelo> Modelo { get; set; }
+        public virtual DbSet<TipoProcesso> TipoProcesso { get; set; }
         public virtual DbSet<View_Cliente> View_Cliente { get; set; }
         public virtual DbSet<View_Fornecedor> View_Fornecedor { get; set; }
         public virtual DbSet<View_Funcionario> View_Funcionario { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<TipoProcesso>()
+                .Property(e => e.Nome)
+                .IsUnicode(false);
+
             modelBuilder.Entity<Marca>()
                 .Property(e => e.Nome)
                 .IsUnicode(false);
