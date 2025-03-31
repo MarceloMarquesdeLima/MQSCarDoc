@@ -1,4 +1,4 @@
-namespace MQSCarDocFrontend.Models
+namespace MQSCarDoc.Models
 {
     using System;
     using System.Collections.Generic;
@@ -9,12 +9,7 @@ namespace MQSCarDocFrontend.Models
     [Table("Empresa")]
     public partial class Empresa
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Empresa()
-        {
-            Usuario = new HashSet<Usuario>();
-        }
-
+        [Key]
         public int ID { get; set; }
 
         public int? Endereco_ID { get; set; }
@@ -35,7 +30,6 @@ namespace MQSCarDocFrontend.Models
 
         public virtual Endereco Endereco { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Usuario> Usuario { get; set; }
     }
 }

@@ -3,27 +3,26 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 
-namespace MQSCarDocFrontend.Models
+namespace MQSCarDoc.Models
 {
     public partial class MQSCarDocContext : DbContext
     {
         public MQSCarDocContext()
-            : base("name=Models")
+            : base("Server=DESKTOP-VF9QGB6\\SQLEXPRESS;Database=MqsCar;User Id=sa;Password=''; Integrated Security=True;")
         {
         }
 
-        public virtual DbSet<Cliente> Cliente { get; set; }
+        public virtual DbSet<Cliente> Clientes { get; set; }
         public virtual DbSet<Empresa> Empresa { get; set; }
         public virtual DbSet<Endereco> Endereco { get; set; }
         public virtual DbSet<Fornecedor> Fornecedor { get; set; }
         public virtual DbSet<Funcionario> Funcionario { get; set; }
         public virtual DbSet<Permissao> Permissao { get; set; }
         public virtual DbSet<PermissaoUsuario> PermissaoUsuario { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Marca> Marca { get; set; }
         public virtual DbSet<Modelo> Modelo { get; set; }
-        public virtual DbSet<TipoProcesso> TipoProcesso { get; set; }
+        public virtual DbSet<TipoProcesso> TipoProcessos { get; set; }
         public virtual DbSet<View_Cliente> View_Cliente { get; set; }
         public virtual DbSet<View_Fornecedor> View_Fornecedor { get; set; }
         public virtual DbSet<View_Funcionario> View_Funcionario { get; set; }
@@ -38,11 +37,7 @@ namespace MQSCarDocFrontend.Models
                 .Property(e => e.Nome)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Marca>()
-                .HasMany(e => e.Modelo)
-                .WithOptional(e => e.Marca)
-                .HasForeignKey(e => e.Marca_ID)
-                .WillCascadeOnDelete();
+            modelBuilder.Entity<Marca>();
 
             modelBuilder.Entity<Modelo>()
                 .Property(e => e.Nome)

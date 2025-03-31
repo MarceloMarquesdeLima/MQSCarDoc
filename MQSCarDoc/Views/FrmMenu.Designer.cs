@@ -1,4 +1,4 @@
-﻿namespace MQSCarDocFrontend
+﻿namespace MQSCarDoc
 {
     partial class FrmMenu
     {

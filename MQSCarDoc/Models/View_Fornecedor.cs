@@ -1,4 +1,4 @@
-namespace MQSCarDocFrontend.Models
+namespace MQSCarDoc.Models
 {
     using System;
     using System.Collections.Generic;

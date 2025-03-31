@@ -1,23 +1,18 @@
-namespace MQSCarDocFrontend.Models
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
+namespace MQSCarDoc.Models
+{
     [Table("Modelo")]
     public partial class Modelo
     {
+        [Key]
         public int ID { get; set; }
-
-        public int? Usuario_ID { get; set; }
-
-        public int? Marca_ID { get; set; }
-
-        [StringLength(100)]
         public string Nome { get; set; }
-
-        public virtual Marca Marca { get; set; }
     }
 }

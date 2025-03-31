@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MQSCarDocFrontend.Models
+namespace MQSCarDoc.Models
 {
-    [Table("Cliente")]
+    [Table("TipoProcesso")]
     public partial class TipoProcesso
     {
+        [Key]
         public int ID { get; set; }
 
         [StringLength(100)]

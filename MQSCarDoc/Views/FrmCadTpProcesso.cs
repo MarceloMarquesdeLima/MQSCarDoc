@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace MQSCarDocFrontend.Views
+namespace MQSCarDoc.Views
 {
     public partial class FrmCadTpProcesso : Form
     {

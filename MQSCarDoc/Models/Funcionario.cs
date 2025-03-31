@@ -1,4 +1,4 @@
-namespace MQSCarDocFrontend.Models
+namespace MQSCarDoc.Models
 {
     using System;
     using System.Collections.Generic;
@@ -9,6 +9,7 @@ namespace MQSCarDocFrontend.Models
     [Table("Funcionario")]
     public partial class Funcionario
     {
+        [Key]
         public int ID { get; set; }
 
         public int? Endereco_ID { get; set; }

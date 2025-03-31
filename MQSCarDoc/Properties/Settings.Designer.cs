@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MQSCarDocFrontend.Properties
+namespace MQSCarDoc.Properties
 {
 
 

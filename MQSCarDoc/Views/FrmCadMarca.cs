@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MQSCarDocFrontend.Views
+namespace MQSCarDoc.Views
 {
     public partial class FrmCadMarca : Form
     {

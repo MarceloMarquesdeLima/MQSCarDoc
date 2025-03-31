@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MQSCarDocFrontend.Models
+namespace MQSCarDoc.Models
 {
     [Table("PermissaoUsuario")]
     public partial class PermissaoUsuario

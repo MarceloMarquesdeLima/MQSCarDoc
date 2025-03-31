@@ -1,9 +1,9 @@
-﻿using MQSCarDocFrontend.Views;
+﻿using MQSCarDoc.Views;
 using System;
 using System.Globalization;
 using System.Windows.Forms;
 
-namespace MQSCarDocFrontend
+namespace MQSCarDoc
 {
     public partial class FrmMenu : Form
     {

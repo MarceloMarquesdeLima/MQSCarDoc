@@ -1,4 +1,4 @@
-﻿namespace MQSCarDocFrontend.Views
+﻿namespace MQSCarDoc.Views
 {
     partial class FrmLogin
     {
@@ -41,7 +41,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MQSCarDocFrontend.Properties.Resources.simbolo;
+            this.pictureBox1.Image = global::MQSCarDoc.Properties.Resources.simbolo;
             this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(249, 274);

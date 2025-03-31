@@ -1,4 +1,4 @@
-﻿namespace MQSCarDocFrontend.Views
+﻿namespace MQSCarDoc.Views
 {
     partial class FrmCadCliente
     {
