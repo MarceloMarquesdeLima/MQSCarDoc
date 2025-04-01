@@ -104,6 +104,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\FrmCadCliente.resx">
       <DependentUpon>FrmCadCliente.cs</DependentUpon>
@@ -151,6 +152,9 @@
       <Project>{8c0fa4b1-b4fa-4583-91b1-969f82eb087a}</Project>
       <Name>MQSCarDoc.DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\transporte.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
