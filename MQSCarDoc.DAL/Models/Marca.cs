@@ -12,7 +12,7 @@ namespace MQSCarDoc.Models
         [Key]
         public int ID { get; set; }
 
-        public int? Usuario_ID { get; set; }
+        public int Usuario_ID { get; set; }
 
         [StringLength(100)]
         public string Nome { get; set; }

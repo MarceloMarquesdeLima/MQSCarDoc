@@ -69,6 +69,10 @@
     <Compile Include="Migrations\202503311822509_Inicial.Designer.cs">
       <DependentUpon>202503311822509_Inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202504011226458_Ajuste.cs" />
+    <Compile Include="Migrations\202504011226458_Ajuste.designer.cs">
+      <DependentUpon>202504011226458_Ajuste.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Empresa.cs" />
@@ -89,6 +93,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202503311822509_Inicial.resx">
       <DependentUpon>202503311822509_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504011226458_Ajuste.resx">
+      <DependentUpon>202504011226458_Ajuste.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
