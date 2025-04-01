@@ -11,6 +11,5 @@ namespace MQSCarDocFrontend.Controllers
         {
             _context = context;
         }
-    {
     }
 }

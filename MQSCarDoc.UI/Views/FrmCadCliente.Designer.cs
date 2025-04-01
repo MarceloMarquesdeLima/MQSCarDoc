@@ -437,8 +437,6 @@
         private System.Windows.Forms.MaskedTextBox txtCnpj;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.MaskedTextBox txtCelular;
-        private MQSCarDocFrontend.MQSCarDocDataSet MQSCarDocDataSet;
-        private MQSCarDocFrontend.MQSCarDocDataSetTableAdapters.View_ClienteTableAdapter view_ClienteTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enderecoIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;

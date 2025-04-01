@@ -1,6 +1,4 @@
-﻿using MQSCarDoc.Models;
-using MQSCarDocFrontend.Controllers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,16 +20,7 @@ namespace MQSCarDoc.Views
 
         private void FrmCadCliente_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'MQSCarDocDataSet.View_Cliente' table. You can move, or remove it, as needed.
-            this.view_ClienteTableAdapter.Fill(this.MQSCarDocDataSet.View_Cliente);
-            // TODO: This line of code loads data into the 'MQSCarDocDataSet.View_Cliente' table. You can move, or remove it, as needed.
-            this.view_ClienteTableAdapter.Fill(this.MQSCarDocDataSet.View_Cliente);
-            MQSCarDocContext context = new MQSCarDocContext();
-
-            var clienteController = new ClienteController(context, dgvListaCliente);
-            clienteController.CarregarClientes();
-
-
+           
         }
 
         private void cbkPessoaFisica_CheckedChanged(object sender, EventArgs e)
