@@ -36,6 +36,7 @@
             this.pessoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fonecedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.veículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modeloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,7 +70,6 @@
             this.stDtaHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.stBarDia = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.empresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.stBarPrincipal.SuspendLayout();
             this.SuspendLayout();
@@ -123,22 +123,29 @@
             this.fonecedorToolStripMenuItem,
             this.empresaToolStripMenuItem});
             this.pessoaToolStripMenuItem.Name = "pessoaToolStripMenuItem";
-            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.pessoaToolStripMenuItem.Text = "Pessoa";
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // fonecedorToolStripMenuItem
             // 
             this.fonecedorToolStripMenuItem.Name = "fonecedorToolStripMenuItem";
-            this.fonecedorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fonecedorToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.fonecedorToolStripMenuItem.Text = "Fonecedor";
             this.fonecedorToolStripMenuItem.Click += new System.EventHandler(this.fonecedorToolStripMenuItem_Click);
+            // 
+            // empresaToolStripMenuItem
+            // 
+            this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
+            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.empresaToolStripMenuItem.Text = "Empresa";
+            this.empresaToolStripMenuItem.Click += new System.EventHandler(this.empresaToolStripMenuItem_Click);
             // 
             // veículosToolStripMenuItem
             // 
@@ -146,7 +153,7 @@
             this.modeloToolStripMenuItem,
             this.marcaToolStripMenuItem});
             this.veículosToolStripMenuItem.Name = "veículosToolStripMenuItem";
-            this.veículosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.veículosToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.veículosToolStripMenuItem.Text = "Veículos";
             // 
             // modeloToolStripMenuItem
@@ -166,7 +173,7 @@
             // tipoDeProcessoToolStripMenuItem
             // 
             this.tipoDeProcessoToolStripMenuItem.Name = "tipoDeProcessoToolStripMenuItem";
-            this.tipoDeProcessoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tipoDeProcessoToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.tipoDeProcessoToolStripMenuItem.Text = "Tipo de Processo";
             this.tipoDeProcessoToolStripMenuItem.Click += new System.EventHandler(this.tipoDeProcessoToolStripMenuItem_Click);
             // 
@@ -378,13 +385,6 @@
             this.timer.Enabled = true;
             this.timer.Interval = 1000;
             // 
-            // empresaToolStripMenuItem
-            // 
-            this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
-            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.empresaToolStripMenuItem.Text = "Empresa";
-            this.empresaToolStripMenuItem.Click += new System.EventHandler(this.empresaToolStripMenuItem_Click);
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,7 +397,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MQS Doccar - Sistema para Despachante DETRAN";
+            this.Text = "MQS Doccar - Sistema de Despachante para DETRAN";
             this.Load += new System.EventHandler(this.FrmMenu_Load_1);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
