@@ -1,5 +1,7 @@
 ﻿
+using MQSCarDoc.Models;
 using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 
@@ -7,49 +9,62 @@ namespace MQSCarDoc.DAL.Interfaces
 {
     public class RepositoryBase<T> : IRepository<T>, IDisposable where T : class
     {
-        public void Adicionar(T entity)
-        {
-            throw new NotImplementedException();
-        }
+        private MQSCarDocContext Context;
 
-        public void Atualizar(T entity)
+        public RepositoryBase()
         {
-            throw new NotImplementedException();
+            Context = new MQSCarDocContext();
         }
-
-        public void Commit()
+        public IQueryable<T> GetTodos()
         {
-            throw new NotImplementedException();
-        }
-
-        public void Deletar(Func<T, bool> predicate)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-
-        public T Find(params object[] key)
-        {
-            throw new NotImplementedException();
-        }
-
-        public T First(Expression<Func<T, bool>> predicate)
-        {
-            throw new NotImplementedException();
+            return Context.Set<T>();
         }
 
         public IQueryable<T> Get(Expression<Func<T, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return  Context.Set<T>().Where(predicate);
         }
 
-        public IQueryable<T> GetTodos()
+        public T Find(params object[] key)
         {
-            throw new NotImplementedException();
+            return Context.Set<T>().Find(key);
+        }
+
+        public T First(Expression<Func<T, bool>> predicate)
+        {
+            return Context.Set<T>().Where(predicate).FirstOrDefault();
+        }
+
+        public void Adicionar(T entity)
+        {
+            Context.Set<T>().Add(entity);
+        }
+
+        public void Atualizar(T entity)
+        {
+            Context.Entry(entity).State = EntityState.Modified;
+        }
+
+        public void Deletar(Func<T, bool> predicate)
+        {
+            Context.Set<T>()
+           .Where(predicate).ToList()
+           .ForEach(del => Context.Set<T>().Remove(del));
+        }
+
+        public void Commit()
+        {
+            Context.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            if (Context != null)
+            {
+                Context.Dispose();
+            }
+            GC.SuppressFinalize(this);
         }
     }
 }
+
