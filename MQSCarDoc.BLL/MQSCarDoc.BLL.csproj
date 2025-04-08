@@ -41,8 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IFuncionarioRepository.cs" />
+    <Compile Include="Interfaces\ITipoProcessoRepository.cs" />
     <Compile Include="Interfaces\IClienteRepositorio.cs" />
     <Compile Include="Interfaces\IEmpresaRepositorio.cs" />
+    <Compile Include="Interfaces\IFornecedorRepository.cs" />
+    <Compile Include="Interfaces\IMarcaRepository.cs" />
+    <Compile Include="Interfaces\IModeloRepository.cs" />
+    <Compile Include="Interfaces\IPermissaoRepository.cs" />
+    <Compile Include="Interfaces\IPermissaoUsuarioRepository.cs" />
+    <Compile Include="Interfaces\IUsuarioRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
